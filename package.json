@@ -21,6 +21,7 @@
     "react-simple-star-rating": "^5.1.7",
     "react-toastify": "^9.1.3",
     "react-youtube": "^10.1.0",
+    "tailwind-scrollbar": "^3.0.4",
     "uniqolor": "^1.1.0"
   },
   "devDependencies": {

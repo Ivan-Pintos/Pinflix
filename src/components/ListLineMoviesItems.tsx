@@ -37,7 +37,6 @@ export default ({ Title, value, rate }: LineMoviesProps) => {
       let validMovies = response.data.results.filter(
         (movie: Movie) => movie.poster_path != null && movie.poster_path != ""
       );
-      console.log(validMovies);
       return setMovies(validMovies.slice(0, 6));
     };
 
