@@ -34,6 +34,10 @@ export type MovieVideos = {
   id: number;
   results: VideoResult[];
 };
+export type Genres = {
+  id: number;
+  name: string;
+};
 
 export type LanguageCode =
   | "en"

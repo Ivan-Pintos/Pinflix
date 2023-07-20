@@ -1,5 +1,5 @@
-import { ToastContainer, toast } from "react-toastify";
-import { useParams } from "react-router-dom";
+// import { ToastContainer, toast } from "react-toastify";
+import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Carousel } from "flowbite-react";
 import uniqolor from "uniqolor";
@@ -14,11 +14,11 @@ import { Movie, languageCodes, MovieVideos } from "../../utils";
 import "react-toastify/dist/ReactToastify.css";
 
 export default () => {
-  const notify = () => toast("Esta funcionalidad sigue en desarrollo");
+  // const notify = () => toast("Esta funcionalidad sigue en desarrollo");
   const [movie, setMovie] = useState<Movie>();
   const [movieVideos, setMovieVideos] = useState<MovieVideos>();
   const { id } = useParams();
-
+  const navigate = useNavigate();
   useEffect(() => {
     const getMovie = async () => {
       const options = {
@@ -68,12 +68,12 @@ export default () => {
   return (
     movie && (
       <>
-        <ToastContainer
+        {/* <ToastContainer
           theme="dark"
           pauseOnFocusLoss={false}
           pauseOnHover={false}
           progressClassName={"bg-blue-500"}
-        />
+        /> */}
         <Navbar />
 
         <>
@@ -112,7 +112,7 @@ export default () => {
                         key={genre.id}
                         className="border rounded-2xl px-2 py-1 font-semibold hover:cursor-pointer hover:brightness-125"
                         style={{ backgroundColor: color }}
-                        onClick={notify}
+                        onClick={() => navigate(`/movies?genre=${genre.id}`)}
                       >
                         {genre.name}
                       </span>
