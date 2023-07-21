@@ -1,4 +1,3 @@
-import { AiFillGithub } from "react-icons/ai";
 import TechnologyIcon from "../components/TechnologyIcon";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
