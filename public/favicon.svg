@@ -1,0 +1,12 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 416" width="108" height="64">
+	<style>
+		.s0 { fill: #032047 } 
+		.s1 { fill: #007ac7 } 
+		.s2 { fill: #033477 } 
+		.s3 { fill: #021c40 } 
+	</style>
+	<path id="Forma 5" class="s0" d="m140.2 371l207.2-96.3 212.2 89.1-214.5-161.8-81.8 64.5"/>
+	<path id="Forma 3" class="s1" d="m139.6 42.9l5.1 2.6 203.4 157.3-42 36.4-166.5 134.3 149.6-169.1"/>
+	<path id="Forma 4" class="s2" d="m138 42l208.9 161.8 83.6-56.5 128.5-93-213.1 103.2"/>
+	<path id="Forma 7" class="s3" d="m561.2 51.5l-155.1 166.3 153.5 145.3-213.5-159.9"/>
+</svg>
