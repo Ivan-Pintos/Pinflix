@@ -108,14 +108,22 @@ export default () => {
             inputQuery={query}
             setExternalQuery={setQuery}
             setAllData={setData}
+            theme="dark"
           />
         </section>
 
         <section className="flex flex-col gap-4">
-          <h1 className="text-2xl">Movies</h1>
+          <h1 className="text-2xl border-b pb-2 border-b-blue-400">Movies</h1>
 
           <div className="flex flex-wrap">
-            {movies.length > 0
+            {movies.length > 0 &&
+            movies.filter((movie) =>
+              genresSelected && genresSelected.length > 0
+                ? genresSelected.every((genre) =>
+                    movie.genre_ids?.includes(genre)
+                  ) && movie.vote_average / 2 >= filterRatingValue - 1
+                : movie.vote_average / 2 >= filterRatingValue - 1
+            )
               ? movies
                   .filter((movie) =>
                     genresSelected && genresSelected.length > 0

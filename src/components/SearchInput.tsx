@@ -13,6 +13,7 @@ type searchProps = {
   inputQuery?: string;
   placeholder?: string;
   inputId?: string;
+  theme?: "dark" | "light";
 };
 
 export default ({
@@ -25,6 +26,7 @@ export default ({
   inputQuery,
   inputId,
   placeholder,
+  theme,
 }: searchProps) => {
   const [query, setQuery] = useState<string>("");
   const navigate = useNavigate();
@@ -61,7 +63,7 @@ export default ({
 
   return (
     <form
-      className="flex w-full sm:w-auto"
+      className="flex w-full sm:w-auto items-center h-full"
       onSubmit={(event) => {
         event.preventDefault();
         handleSearch(query);
@@ -70,12 +72,22 @@ export default ({
       <input
         type="text"
         placeholder={placeholder ? placeholder : "Buscar..."}
-        className="rounded-s-lg h-full border-0 border-r-2 border-slate-200 bg-slate-100 text-slate-800 outline-0 w-full"
+        className={`rounded-s-lg h-full outline-0 w-full ${
+          theme === "dark"
+            ? "bg-slate-800 border-0 text-slate-200"
+            : " border-slate-200 bg-slate-100 text-slate-900"
+        } `}
         onChange={handleChangeSearch}
         value={inputQuery}
         id={inputId && inputId}
       />
-      <button className="bg-slate-200 h-full rounded-r-lg text-slate-950 p-2 text-xl">
+      <button
+        className={`p-2 text-xl  h-full rounded-r-lg border ${
+          theme === "dark"
+            ? "bg-slate-700 text-slate-300 border-slate-700"
+            : "bg-slate-200 text-slate-950 border-slate-200"
+        }`}
+      >
         <AiOutlineSearch />
       </button>
     </form>

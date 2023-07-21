@@ -6,6 +6,7 @@ import axios from "axios";
 import Offcanvas from "./offcanvas/Offcanvas";
 import { Genres } from "../../utils";
 
+import testLogo from "../img/LogoPinflix.svg";
 export default () => {
   const [openOffcanvas, setOpenOffcanvas] = useState(false);
   const [genres, setGenres] = useState<Genres[]>([]);
@@ -31,7 +32,7 @@ export default () => {
     <div className="bg-gradient-opacity w-full px-2 md:px-10 text-slate-100 bg-opacity-80 absolute z-10 h-16 ">
       <div className="flex items-center justify-between h-full">
         <Link to="/" className=" text-xl">
-          Pinflix
+          <img src={testLogo} alt="" className="h-10" />
         </Link>
         <button
           onClick={() => setOpenOffcanvas((prev) => !prev)}
@@ -45,13 +46,6 @@ export default () => {
         setOpen={setOpenOffcanvas}
         sections={[
           {
-            title: "Listado de Peliculas",
-            content: {
-              type: "link",
-              url: "/movies",
-            },
-          },
-          {
             title: "Generos",
             content: {
               type: "Options",
@@ -59,6 +53,37 @@ export default () => {
                 text: genre.name,
                 url: `/movies?genre=${genre.id}`,
               })),
+            },
+          },
+          {
+            title: "Listado de Peliculas",
+            content: {
+              type: "link",
+              url: "/movies",
+            },
+          },
+          {
+            title: "Acerca de este proyecto",
+            content: {
+              type: "link",
+              url: "/about",
+            },
+          },
+          {
+            title: "Contacto",
+            content: {
+              type: "button",
+              button: [
+                { icon: "github", url: "https://github.com/Ivan-Pintos" },
+                {
+                  icon: "linkedin",
+                  url: "https://www.linkedin.com/in/ivan-pintos/",
+                },
+                {
+                  icon: "mail",
+                  copyText: "ivanleonpintos@gmail.com",
+                },
+              ],
             },
           },
         ]}

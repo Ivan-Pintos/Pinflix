@@ -8,7 +8,7 @@ type OffCanvasProps = {
 };
 
 const OffCanvas: React.FC<OffCanvasProps> = ({ title, options }) => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -18,7 +18,7 @@ const OffCanvas: React.FC<OffCanvasProps> = ({ title, options }) => {
     <div>
       <h3
         onClick={handleClick}
-        className="cursor-pointer border-b-blue-500 border-b pb-2 px-1 text-lg flex gap-2 items-center"
+        className="cursor-pointer border-b-blue-500 border-b pb-2 px-1 text-lg flex gap-2 items-center hover:text-blue-400"
       >
         {title} <MdKeyboardArrowDown />
       </h3>
@@ -26,7 +26,9 @@ const OffCanvas: React.FC<OffCanvasProps> = ({ title, options }) => {
         <ul className="flex flex-col gap-1 py-2">
           {options.map((option, index) => (
             <li key={index} className="ml-5 font-lg">
-              <Link to={option.url}>{option.text}</Link>
+              <Link to={option.url} className="hover:text-blue-400">
+                {option.text}
+              </Link>
             </li>
           ))}
         </ul>

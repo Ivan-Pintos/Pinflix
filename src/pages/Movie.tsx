@@ -1,4 +1,3 @@
-// import { ToastContainer, toast } from "react-toastify";
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Carousel } from "flowbite-react";
@@ -11,10 +10,8 @@ import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 
 import { Movie, languageCodes, MovieVideos } from "../../utils";
-import "react-toastify/dist/ReactToastify.css";
 
 export default () => {
-  // const notify = () => toast("Esta funcionalidad sigue en desarrollo");
   const [movie, setMovie] = useState<Movie>();
   const [movieVideos, setMovieVideos] = useState<MovieVideos>();
   const { id } = useParams();
@@ -68,14 +65,7 @@ export default () => {
   return (
     movie && (
       <>
-        {/* <ToastContainer
-          theme="dark"
-          pauseOnFocusLoss={false}
-          pauseOnHover={false}
-          progressClassName={"bg-blue-500"}
-        /> */}
         <Navbar />
-
         <>
           <Header
             img={`${import.meta.env.VITE_API_URL_IMG}${movie.backdrop_path}`}

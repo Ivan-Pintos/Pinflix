@@ -1,5 +1,6 @@
 import InfiniteScroll from "react-infinite-scroll-component";
 import { useState, useEffect } from "react";
+import { Spinner } from "flowbite-react";
 import axios from "axios";
 
 type InfiniteScrollProps = {
@@ -47,12 +48,13 @@ export default ({
       dataLength={originalContent.length}
       next={fetchData}
       hasMore={page <= iterationMaxNumber}
-      loader={"Loading more content"}
-      endMessage={
-        <p style={{ textAlign: "center" }}>
-          <b>Yay! You have seen it all</b>
-        </p>
+      loader={
+        <div className="flex justify-center gap-2">
+          <Spinner aria-label="Medium sized spinner " size="md" />
+          <span>Loading...</span>
+        </div>
       }
+      endMessage={<></>}
     >
       {}
     </InfiniteScroll>
