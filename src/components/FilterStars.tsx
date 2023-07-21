@@ -18,17 +18,17 @@ export default ({ setFilterRatingValue }: FilterProps) => {
       showTooltip={true}
       tooltipClassName="w-40 text-center bg-slate-800 inline"
       tooltipArray={[
-        "0 Rating",
+        "Puntuación 0",
 
-        "2 Rating",
+        "Puntuación 2",
 
-        "4 Rating",
+        "Puntuación 4",
 
-        "6 Rating",
+        "Puntuación 6",
 
-        "8 Rating",
+        "Puntuación 8",
       ]}
-      tooltipDefaultText="0 Rating"
+      tooltipDefaultText="Puntuación 0"
     />
   );
 };

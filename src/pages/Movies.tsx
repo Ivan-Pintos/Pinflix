@@ -46,7 +46,6 @@ export default () => {
   }, []);
 
   const handleSelectedChange = (selected: any) => {
-    console.log("Selected options: ", selected);
     setGenresSelected(selected);
   };
 
@@ -59,7 +58,6 @@ export default () => {
   }, [search]);
 
   useEffect(() => {
-    console.log(search);
     setQueryChange(true);
     setTimeout(() => {
       setQueryChange(false);
@@ -113,7 +111,9 @@ export default () => {
         </section>
 
         <section className="flex flex-col gap-4">
-          <h1 className="text-2xl border-b pb-2 border-b-blue-400">Movies</h1>
+          <h1 className="text-2xl border-b pb-2 border-b-blue-400">
+            Peliculas
+          </h1>
 
           <div className="flex flex-wrap">
             {movies.length > 0 &&
@@ -137,7 +137,7 @@ export default () => {
                       <MoviesItem movie={movie} key={movie.id} rate={true} />
                     );
                   })
-              : "Sorry actually we do not have any movie with the filters selected. Please select other filter options."}
+              : "No encontramos ninguna película con las opciones de filtro seleccionadas. Por favor, seleccione otras opciones de filtro."}
           </div>
         </section>
         <ScrollUpButton />

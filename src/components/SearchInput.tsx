@@ -46,7 +46,6 @@ export default ({
       };
 
       let response = await axios.request(options);
-      console.log(response.data);
       setAllData && setAllData({ total_pages: response.data.total_pages }); // possible wrong
       setResponse && setResponse(response.data.results);
       return;

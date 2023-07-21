@@ -160,7 +160,7 @@ export default ({
                               }}
                               className="flex gap-2 items-center border-b pb-2 border-b-blue-400 hover:text-blue-400"
                             >
-                              <span className="text-md">Mail</span>
+                              <span className="text-md">Email</span>
                               <span className="text-2xl">
                                 <AiFillMail />
                               </span>
@@ -199,7 +199,7 @@ export default ({
                             }}
                             className="flex gap-2 items-center border-b pb-2 border-b-blue-400 hover:text-blue-400"
                           >
-                            <span className="text-md">Mail</span>
+                            <span className="text-md">Email</span>
                             <span className="text-2xl">
                               <AiFillMail />
                             </span>

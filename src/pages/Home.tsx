@@ -18,7 +18,7 @@ export default () => {
           value={sortvalue.news}
         />
         <ListLineMoviesItems
-          Title={"Mejor rating"}
+          Title={"Mejor puntuación"}
           value={sortvalue.votes}
           rate={true}
         />

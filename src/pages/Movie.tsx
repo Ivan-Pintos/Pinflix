@@ -114,7 +114,7 @@ export default () => {
               <div className="flex flex-row gap-10 justify-between my-10 lg:w-2/3">
                 <div className="flex flex-col gap-4">
                   <div>
-                    <h3 className="text-xl font-semibold">Original Lenguaje</h3>
+                    <h3 className="text-xl font-semibold">Lenguaje original</h3>
                     <span>{languageCodes[movie.original_language]}</span>
                   </div>
                   <div>
@@ -122,7 +122,7 @@ export default () => {
                     <span>{movie.vote_count.toLocaleString("es-ES")}</span>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold">Recaudacion</h3>
+                    <h3 className="text-xl font-semibold">Recaudación</h3>
                     <span>
                       $ {movie.revenue && movie.revenue.toLocaleString("es-ES")}
                     </span>
@@ -136,7 +136,7 @@ export default () => {
                     <span>{movie.release_date}</span>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold">Duracion:</h3>
+                    <h3 className="text-xl font-semibold">Duracion</h3>
                     <span>{movie.runtime && MovieDuration(movie.runtime)}</span>
                   </div>
                   <div className="hidden sm:block">

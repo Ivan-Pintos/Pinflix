@@ -46,7 +46,7 @@ export default () => {
         setOpen={setOpenOffcanvas}
         sections={[
           {
-            title: "Generos",
+            title: "Géneros",
             content: {
               type: "Options",
               options: genres.map((genre) => ({
@@ -56,7 +56,7 @@ export default () => {
             },
           },
           {
-            title: "Listado de Peliculas",
+            title: "Listado de Películas",
             content: {
               type: "link",
               url: "/movies",

@@ -40,7 +40,6 @@ export default ({
     const response = await axios.request(options);
     setOriginalContent((prev) => [...prev, ...response.data.results]);
     setPage((prev) => prev + 1);
-    console.log(page);
     return;
   };
   return (
